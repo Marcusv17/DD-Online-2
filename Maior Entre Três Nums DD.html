@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maior entre Três Números</title>
+</head>
+<body>
+    <h3>Maior entre Três Números</h3>
+    <input type="number" id="numero1" placeholder="Número 1">
+    <input type="number" id="numero2" placeholder="Número 2">
+    <input type="number" id="numero3" placeholder="Número 3">
+    <button onclick="document.getElementById('resultado').textContent = 'Maior: ' + MaiorEntreTres(parseFloat(document.getElementById('numero1').value), parseFloat(document.getElementById('numero2').value), parseFloat(document.getElementById('numero3').value))">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function MaiorEntreTres(a, b, c) {
+            if (a >= b && a >= c) return a;
+            else if (b >= a && b >= c) return b;
+            else return c;
+        }
+    </script>
+</body>
+</html>

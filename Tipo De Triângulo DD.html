@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tipo De Triângulo</title>
+</head>
+<body>
+    <h3>Tipo De Triângulo</h3>
+    <input type="number" id="lado1" placeholder="Lado 1">
+    <input type="number" id="lado2" placeholder="Lado 2">
+    <input type="number" id="lado3" placeholder="Lado 3">
+    <button onclick="document.getElementById('resultado').textContent = tipoTriangulo(parseFloat(document.getElementById('lado1').value), parseFloat(document.getElementById('lado2').value), parseFloat(document.getElementById('lado3').value))">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function tipoTriangulo(l1, l2, l3) {
+            if (l1 === l2 && l2 === l3) return "Equilátero";
+            else if (l1 === l2 || l1 === l3 || l2 === l3) return "Isósceles";
+            else return "Escaleno";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificador De Senhaa</title>
+</head>
+<body>
+    <h3>Verificador De Senhas</h3>
+    <input type="password" id="senhaInput" placeholder="Digite a senha">
+    <button onclick="document.getElementById('resultado').textContent = senhaForte(document.getElementById('senhaInput').value) ? 'Senha Forte' : 'Senha Fraca'">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function senhaForte(senha) {
+            return senha.length > 8 && senha !== "12345678";
+        }
+    </script>
+</body>
+</html>

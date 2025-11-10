@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificador de Idade para Habilitação</title>
+</head>
+<body>
+    <h3>Verificador de Idade para Habilitação</h3>
+    <input type="number" id="idadeInput" placeholder="Digite a idade">
+    <button onclick="document.getElementById('resultado').textContent = podeDirigir(document.getElementById('idadeInput').value)">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function podeDirigir(idade) {
+            if (idade >= 18) return "Já pode ser habilitado(a)";
+            else return "Ainda não pode ser habilitado(a)";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formatacao De Telefone</title>
+</head>
+<body>
+    <h3>Formatacao De Telefone</h3>
+    <input type="text" id="telefoneInput" placeholder="Digite 8 digitos" maxlength="8">
+    <button onclick="document.getElementById('resultado').textContent = formatarTelefone(document.getElementById('telefoneInput').value)">Formatar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function formatarTelefone(numero) {
+            if (numero.length !== 8) return "Numero deve ter 8 digitos";
+            return numero.slice(0, 4) + "-" + numero.slice(4);
+        }
+    </script>
+</body>
+</html>

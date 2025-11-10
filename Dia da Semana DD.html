@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dia Da Semana</title>
+</head>
+<body>
+    <h3>Classificador De Dia Da Semana</h3>
+    <input type="number" min="1" max="7" id="diaInput" placeholder="Número do dia (1-7)">
+    <button onclick="document.getElementById('resultado').textContent = nomeDoDia(parseInt(document.getElementById('diaInput').value))">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function nomeDoDia(numero) {
+            switch(numero) {
+                case 1: return "Domingo";
+                case 2: return "Segunda";
+                case 3: return "Terça";
+                case 4: return "Quarta";
+                case 5: return "Quinta";
+                case 6: return "Sexta";
+                case 7: return "Sábado";
+                default: return "Número inválido";
+            }
+        }
+    </script>
+</body>
+</html>

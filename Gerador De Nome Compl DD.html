@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nome Completo</title>
+</head>
+<body>
+    <h3>Gerador De Nome Completo</h3>
+    <input type="text" id="primeiroNome" placeholder="Primeiro nome">
+    <input type="text" id="sobrenome" placeholder="Sobrenome">
+    <button onclick="document.getElementById('resultado').textContent = gerarNomeCompleto({primeiroNome: document.getElementById('primeiroNome').value, sobrenome: document.getElementById('sobrenome').value})">Gerar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function gerarNomeCompleto(pessoa) {
+            return pessoa.primeiroNome + " " + pessoa.sobrenome;
+        }
+    </script>
+</body>
+</html>
